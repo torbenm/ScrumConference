@@ -1,0 +1,45 @@
+﻿<?xml version='1.0' encoding='utf-8'?>
+<SettingsFile xmlns="http://schemas.microsoft.com/VisualStudio/2004/01/settings" CurrentProfile="(Default)" GeneratedClassNamespace="ScrumTouchkit.Utilities" GeneratedClassName="Settings">
+  <Profiles />
+  <Settings>
+    <Setting Name="MIN_DECIBEL" Type="System.Int32" Scope="User">
+      <Value Profile="(Default)">-30</Value>
+    </Setting>
+    <Setting Name="CHANNELS" Type="System.Int32" Scope="User">
+      <Value Profile="(Default)">2</Value>
+    </Setting>
+    <Setting Name="SAMPLE_RATE" Type="System.Int32" Scope="User">
+      <Value Profile="(Default)">16000</Value>
+    </Setting>
+    <Setting Name="CLIENT_NAME" Type="System.String" Scope="User">
+      <Value Profile="(Default)">SCRUM</Value>
+    </Setting>
+    <Setting Name="UDP_PORT" Type="System.Int32" Scope="User">
+      <Value Profile="(Default)">3001</Value>
+    </Setting>
+    <Setting Name="STD_TCP_PORT" Type="System.Int32" Scope="User">
+      <Value Profile="(Default)">4371</Value>
+    </Setting>
+    <Setting Name="RECORD_DEVICE" Type="System.Int32" Scope="User">
+      <Value Profile="(Default)">0</Value>
+    </Setting>
+    <Setting Name="PLAYBACK_DEVICE" Type="System.Int32" Scope="User">
+      <Value Profile="(Default)">0</Value>
+    </Setting>
+    <Setting Name="TUIO_PORT" Type="System.Int32" Scope="User">
+      <Value Profile="(Default)">3333</Value>
+    </Setting>
+    <Setting Name="TOUCH_FEEDBACK" Type="System.Boolean" Scope="User">
+      <Value Profile="(Default)">True</Value>
+    </Setting>
+    <Setting Name="PRODUCT_BACKLOG_EXT" Type="System.String" Scope="User">
+      <Value Profile="(Default)">.pbf</Value>
+    </Setting>
+    <Setting Name="SPRINT_BACKLOG_EXT" Type="System.String" Scope="User">
+      <Value Profile="(Default)">.sbf</Value>
+    </Setting>
+    <Setting Name="COMPRESS" Type="System.Boolean" Scope="User">
+      <Value Profile="(Default)">False</Value>
+    </Setting>
+  </Settings>
+</SettingsFile>

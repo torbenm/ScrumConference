@@ -1,0 +1,39 @@
+﻿<Dialogs:Dialog xmlns:Dialogs="clr-namespace:ScrumTouchkit.Controls.Dialogs"  
+             x:Class="ScrumTouchkit.Controls.Dialogs.UI.SettingsDialog"
+             xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+             xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+             mc:Ignorable="d" Width="300" Height="346" BorderBrush="Black" Background="#FFF1F1F1" BorderThickness="2">
+    <UserControl.Effect>
+        <DropShadowEffect BlurRadius="20" Direction="0" ShadowDepth="0"/>
+    </UserControl.Effect>
+    <StackPanel>
+        <Viewbox Height="43">
+            <TextBlock TextWrapping="Wrap" Text="Settings" FontWeight="Bold"/>
+        </Viewbox>
+        <Grid Height="43">
+            <Label Content="Client Name" HorizontalAlignment="Left" Margin="10,6,0,0" VerticalAlignment="Top"/>
+            <TextBox x:Name="_clientname"  HorizontalAlignment="Left" Height="23" Margin="108,10,0,0" TextWrapping="Wrap" Text="TextBox" VerticalAlignment="Top" Width="174" MaxLength="100" IsUndoEnabled="True"/>
+        </Grid>
+        <Grid Height="43">
+            <Label Content="TCP Port" HorizontalAlignment="Left" Margin="10,6,0,0" VerticalAlignment="Top"/>
+            <TextBox x:Name="_tcpport"  HorizontalAlignment="Left" Height="23" Margin="108,10,0,0" TextWrapping="Wrap" Text="TextBox" VerticalAlignment="Top" Width="174"/>
+        </Grid>
+        <Grid Height="43">
+            <Label Content="UDP Port" HorizontalAlignment="Left" Margin="10,6,0,0" VerticalAlignment="Top"/>
+            <TextBox x:Name="_udpport"  HorizontalAlignment="Left" Height="23" Margin="108,10,0,0" TextWrapping="Wrap" Text="TextBox" VerticalAlignment="Top" Width="174"/>
+        </Grid>
+        <Grid Height="49">
+            <TextBlock TextWrapping="Wrap" Text="This program was developed in 2015 as a result of a bachelor thesis." HorizontalAlignment="Left" Margin="10,10,0,0" VerticalAlignment="Top" Width="280"/>
+        </Grid>
+        <Grid Height="49">
+            <TextBlock TextWrapping="Wrap" Text="Icons used are from http://www.flaticon.com" HorizontalAlignment="Left" Margin="10,10,0,0" VerticalAlignment="Top" Width="280"/>
+        </Grid>
+        <Grid Height="68">
+            <Button x:Name="_save" Content="Save and Close" HorizontalAlignment="Left" Margin="192,10,0,0" VerticalAlignment="Top" Width="98" Height="48"/>
+            <Button x:Name="_cancel" Content="Cancel" HorizontalAlignment="Left" Margin="80,10,0,0" VerticalAlignment="Top" Width="98" Height="48"/>
+        </Grid>
+
+    </StackPanel>
+</Dialogs:Dialog>

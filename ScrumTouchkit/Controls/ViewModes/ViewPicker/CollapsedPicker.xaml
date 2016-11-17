@@ -1,0 +1,28 @@
+﻿<UserControl
+             xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+             xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+             xmlns:local="clr-namespace:ScrumTouchkit.Controls.ViewModes.ViewPicker" x:Class="ScrumTouchkit.Controls.ViewModes.ViewPicker.CollapsedPicker" 
+             mc:Ignorable="d" Height="150" Width="270">
+    <Grid>
+        <Grid.Effect>
+            <DropShadowEffect BlurRadius="15" Direction="0" ShadowDepth="0" Color="Black"/>
+        </Grid.Effect>
+        <Rectangle HorizontalAlignment="Stretch"  Stroke="Black" StrokeThickness="2" VerticalAlignment="Stretch" Fill="#FFF0F0F0" />
+
+        <local:ViewElement x:Name="currentView" HorizontalAlignment="Left" Margin="10,10,0,0" VerticalAlignment="Top"/>
+        <Rectangle x:FieldModifier="public" x:Name="expandRect" Fill="#FF8A8A8A" HorizontalAlignment="Left" Height="35" Stroke="#FF8A8A8A" Margin="2,115,2,2"  StrokeThickness="2" VerticalAlignment="Top" Width="270"/>
+        <Polygon 
+             Fill="#FFECECEC"
+             Stroke="#FF595959"
+             StrokeThickness="2">
+            <Polygon.Points>
+                <Point X="120" Y="122" />
+                <Point X="150" Y="122" />
+                <Point X="135" Y="144" />
+
+            </Polygon.Points>
+        </Polygon>
+    </Grid>
+</UserControl>

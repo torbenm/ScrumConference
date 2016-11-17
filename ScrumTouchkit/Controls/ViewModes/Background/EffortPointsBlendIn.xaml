@@ -1,0 +1,15 @@
+﻿<UserControl x:Class="ScrumTouchkit.Controls.ViewModes.Background.EffortPointsBlendIn"
+             xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+             xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+             mc:Ignorable="d" 
+            Height="200" Width="200"
+             HorizontalAlignment="Center" VerticalAlignment="Center">
+    <Grid>
+        <Viewbox HorizontalAlignment="Stretch" VerticalAlignment="Stretch">
+            <TextBlock x:Name="Text" HorizontalAlignment="Left" TextWrapping="Wrap" Text="8" VerticalAlignment="Top"/>
+        </Viewbox>
+
+    </Grid>
+</UserControl>

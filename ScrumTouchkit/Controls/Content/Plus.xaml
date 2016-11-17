@@ -1,0 +1,15 @@
+﻿<UserControl x:Class="ScrumTouchkit.Controls.Content.Plus"
+             xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+             xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+             mc:Ignorable="d" 
+             d:DesignHeight="80" d:DesignWidth="80">
+    <Grid>
+        <Grid.Effect>
+            <DropShadowEffect BlurRadius="10" ShadowDepth="0" Direction="0"/>
+        </Grid.Effect>
+        <Line X1="40" X2="40" Y1="0" Y2="80" Stroke="#FF009B00" StrokeThickness="20"/>
+        <Line X1="0" X2="80" Y1="40" Y2="40" Stroke="#FF009B00" StrokeThickness="20" />
+    </Grid>
+</UserControl>

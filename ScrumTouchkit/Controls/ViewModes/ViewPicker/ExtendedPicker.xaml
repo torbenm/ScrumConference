@@ -1,0 +1,33 @@
+﻿<UserControl
+             xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+             xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+             xmlns:local="clr-namespace:ScrumTouchkit.Controls.ViewModes.ViewPicker" x:Class="ScrumTouchkit.Controls.ViewModes.ViewPicker.ExtendedPicker" 
+             mc:Ignorable="d" Height="610" Width="270">
+    <Grid>
+        <Grid.Effect>
+            <DropShadowEffect BlurRadius="15" Direction="0" ShadowDepth="0" Color="Black"/>
+        </Grid.Effect>
+         <Rectangle HorizontalAlignment="Stretch"  Stroke="Black" StrokeThickness="2" VerticalAlignment="Stretch" Fill="#FFF0F0F0" />
+        <Rectangle HorizontalAlignment="Stretch"  Stroke="Black" StrokeThickness="2" VerticalAlignment="Stretch" Fill="#FFBFBFBF" Margin="0,120,0,0" />
+
+        <local:ViewElement x:Name="currentView" HorizontalAlignment="Left" Margin="10,10,0,0" VerticalAlignment="Top"/>
+        <Rectangle x:Name="collapseRect"  Fill="#FF8A8A8A" HorizontalAlignment="Left" Height="35" Stroke="#FF8A8A8A" Margin="2,575,2,2"  StrokeThickness="2" VerticalAlignment="Top" Width="270"/>
+        <Polygon 
+             Fill="#FFECECEC"
+             Stroke="#FF595959"
+             StrokeThickness="2">
+            <Polygon.Points>
+                <Point X="120" Y="602" />
+                <Point X="150" Y="602" />
+                <Point X="135" Y="580" />
+
+            </Polygon.Points>
+        </Polygon>
+        <local:ViewElement x:Name="std_view" HorizontalAlignment="Left" Margin="10,130,0,0" VerticalAlignment="Top" Text="Standard"/>
+        <local:ViewElement x:Name="epics_view" HorizontalAlignment="Left" Margin="10,240,0,0" VerticalAlignment="Top"/>
+        <local:ViewElement x:Name="effort_view" HorizontalAlignment="Left" Margin="10,350,0,0" VerticalAlignment="Top" Text="Effort"/>
+        <local:ViewElement x:Name="prio_view" HorizontalAlignment="Left" Margin="10,460,0,0" VerticalAlignment="Top" Text="Priority"/>
+    </Grid>
+</UserControl>

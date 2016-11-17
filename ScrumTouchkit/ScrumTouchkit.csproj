@@ -1,0 +1,332 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{95FB66D6-7629-44B9-9466-E4D2CC12AE17}</ProjectGuid>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>ScrumTouchkit</RootNamespace>
+    <AssemblyName>ScrumTouchkit</AssemblyName>
+    <TargetFrameworkVersion>v4.0</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="Accessibility" />
+    <Reference Include="NAudio">
+      <HintPath>..\NAudio\NAudio.dll</HintPath>
+    </Reference>
+    <Reference Include="Newtonsoft.Json, Version=6.0.0.0, Culture=neutral, PublicKeyToken=30ad4fe6b2a6aeed, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\JSON\Newtonsoft.Json.dll</HintPath>
+    </Reference>
+    <Reference Include="PresentationCore" />
+    <Reference Include="PresentationFramework" />
+    <Reference Include="PresentationUI, Version=4.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL" />
+    <Reference Include="ReachFramework" />
+    <Reference Include="System" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Deployment" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Printing" />
+    <Reference Include="System.Windows" />
+    <Reference Include="System.Windows.Forms" />
+    <Reference Include="System.Xaml" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Xml" />
+    <Reference Include="UIAutomationProvider" />
+    <Reference Include="UIAutomationTypes" />
+    <Reference Include="WindowsBase" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Controls\Abstract\ItemControl.cs" />
+    <Compile Include="Controls\Abstract\StandardSurfaceObject.cs" />
+    <Compile Include="Controls\Abstract\SurfaceObject.cs" />
+    <Compile Include="Controls\Abstract\TransformableControl.cs" />
+    <Compile Include="Controls\Animation\AnimationExtension.cs" />
+    <Compile Include="Controls\Animation\Animator.cs" />
+    <Compile Include="Controls\Buttons\ButtonController.cs" />
+    <Compile Include="Controls\Buttons\DeleteButton.cs" />
+    <Compile Include="Controls\Buttons\UI\Button.xaml.cs">
+      <DependentUpon>Button.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Controls\Content\Abstract\BaseUI.cs" />
+    <Compile Include="Controls\Content\Abstract\Editor.cs" />
+    <Compile Include="Controls\Content\Minus.xaml.cs">
+      <DependentUpon>Minus.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Controls\Content\DeleteCross.xaml.cs">
+      <DependentUpon>DeleteCross.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Controls\Content\Plus.xaml.cs">
+      <DependentUpon>Plus.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Controls\Dialogs\DialogControl.cs" />
+    <Compile Include="Controls\Dialogs\DialogInfo.cs" />
+    <Compile Include="Controls\Dialogs\NoTouchLayer.cs" />
+    <Compile Include="Controls\Dialogs\UI\ChooseEndPointType.xaml.cs">
+      <DependentUpon>ChooseEndPointType.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Controls\Dialogs\UI\CreateClient.xaml.cs">
+      <DependentUpon>CreateClient.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Controls\Dialogs\Dialog.cs" />
+    <Compile Include="Controls\Dialogs\UI\MessageDialog.xaml.cs">
+      <DependentUpon>MessageDialog.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Controls\Dialogs\UI\SettingsDialog.xaml.cs">
+      <DependentUpon>SettingsDialog.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Controls\Content\Lines\ConnectionLine.cs" />
+    <Compile Include="Controls\Content\EpicUI_Editor.xaml.cs">
+      <DependentUpon>EpicUI_Editor.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Controls\Content\EpicUI_View.xaml.cs">
+      <DependentUpon>EpicUI_View.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Controls\Content\Abstract\IContent.cs" />
+    <Compile Include="Controls\Content\EpicUI_Base.cs" />
+    <Compile Include="Controls\Content\CenterCross.xaml.cs">
+      <DependentUpon>CenterCross.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Controls\Content\UserStoryUI_Editor.xaml.cs">
+      <DependentUpon>UserStoryUI_Editor.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Controls\Content\UserStoryUI_View.xaml.cs">
+      <DependentUpon>UserStoryUI_View.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Controls\Content\UserStoryUI_Base.cs" />
+    <Compile Include="Controls\EpicControl.cs" />
+    <Compile Include="Controls\Feedback\TouchFeedback.cs" />
+    <Compile Include="Controls\ViewModes\Background\EffortBars.xaml.cs">
+      <DependentUpon>EffortBars.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Controls\ViewModes\Background\EffortBar.xaml.cs">
+      <DependentUpon>EffortBar.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Controls\ViewModes\Background\EffortPointsBlendIn.xaml.cs">
+      <DependentUpon>EffortPointsBlendIn.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Controls\ViewModes\EffortView.cs" />
+    <Compile Include="Controls\ViewModes\EpicView.cs" />
+    <Compile Include="Controls\ViewModes\PriorityView.cs" />
+    <Compile Include="Controls\ViewModes\SettingsLoader\EffortLoader.cs" />
+    <Compile Include="Controls\ViewModes\SettingsLoader\SettingsLoader.cs" />
+    <Compile Include="Controls\ViewModes\SettingsLoader\PriorityLoader.cs" />
+    <Compile Include="Controls\ViewModes\SettingsLoader\StandardSettingsLoader.cs" />
+    <Compile Include="Controls\ViewModes\ScrumViewController.cs" />
+    <Compile Include="Controls\ViewModes\StandardView.cs" />
+    <Compile Include="Controls\ViewModes\BaseView.cs" />
+    <Compile Include="Controls\Network\NetworkTextbox.cs" />
+    <Compile Include="Controls\ScrumSurface.cs" />
+    <Compile Include="Controls\Style\Colors.cs" />
+    <Compile Include="Controls\Style\StyleHelper.cs" />
+    <Compile Include="Controls\Network\TextBoxState.cs" />
+    <Compile Include="Controls\UserStoryControl.cs" />
+    <Compile Include="Controls\DisplaySettings\DisplaySettingsCollection.cs" />
+    <Compile Include="Controls\DisplaySettings\DisplaySettings.cs" />
+    <Compile Include="Controls\ViewModes\ViewPicker\CollapsedPicker.xaml.cs">
+      <DependentUpon>CollapsedPicker.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Controls\ViewModes\ViewPicker\ExtendedPicker.xaml.cs">
+      <DependentUpon>ExtendedPicker.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Controls\ViewModes\ViewPicker\ViewElement.xaml.cs">
+      <DependentUpon>ViewElement.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Controls\ViewModes\ViewPicker\ViewPicker.cs" />
+    <Compile Include="Data\Effort\EffortPoints.cs" />
+    <Compile Include="Events\EffortPointsChangedEventArgs.cs" />
+    <Compile Include="Data\Epic.cs" />
+    <Compile Include="Data\ItemBase.cs" />
+    <Compile Include="Data\ItemProjectStatus.cs" />
+    <Compile Include="Data\ScrumDatabase.cs" />
+    <Compile Include="Data\Update\TimedUpdate.cs" />
+    <Compile Include="Data\UserStory.cs" />
+    <Compile Include="Events\GenericEventArgs.cs" />
+    <Compile Include="Events\DialogEventArgs.cs" />
+    <Compile Include="Events\EditorStateEventArgs.cs" />
+    <Compile Include="Events\PositionEventArgs.cs" />
+    <Compile Include="Events\TextBoxStateEventArgs.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Threading\BlockingQueue.cs" />
+    <Compile Include="Threading\DispatcherClass.cs" />
+    <Compile Include="Threading\Extensions.cs" />
+    <Compile Include="Utilities\Images.Designer.cs">
+      <DependentUpon>Images.resx</DependentUpon>
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+    </Compile>
+    <Compile Include="Utilities\InitialAngleHelper.cs" />
+    <Compile Include="Utilities\MathHelper.cs" />
+    <Compile Include="Utilities\Serializer\IFileManager.cs" />
+    <Compile Include="Utilities\Serializer\ISerializer.cs" />
+    <Compile Include="Utilities\Serializer\JSONSerializer.cs" />
+    <Compile Include="Utilities\Serializer\XMLSerializer.cs" />
+    <Compile Include="Utilities\Settings.Designer.cs">
+      <DependentUpon>Settings.settings</DependentUpon>
+      <AutoGen>True</AutoGen>
+      <DesignTimeSharedInput>True</DesignTimeSharedInput>
+    </Compile>
+    <Compile Include="Utilities\VectorExtension.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="app.config" />
+    <None Include="Utilities\Settings.settings">
+      <Generator>PublicSettingsSingleFileGenerator</Generator>
+      <LastGenOutput>Settings.Designer.cs</LastGenOutput>
+    </None>
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\ScrumGestures\ScrumGestures.csproj">
+      <Project>{ec924bc0-2d6d-4a55-899d-b22f8977d956}</Project>
+      <Name>ScrumGestures</Name>
+    </ProjectReference>
+  </ItemGroup>
+  <ItemGroup>
+    <Page Include="Controls\Buttons\UI\Button.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="Controls\Content\Minus.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="Controls\Content\DeleteCross.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="Controls\Content\Plus.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Controls\Dialogs\UI\ChooseEndPointType.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="Controls\Dialogs\UI\CreateClient.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="Controls\Dialogs\UI\MessageDialog.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="Controls\Dialogs\UI\SettingsDialog.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="Controls\Content\EpicUI_Editor.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Controls\Content\EpicUI_View.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Controls\Content\CenterCross.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Controls\Content\UserStoryUI_Editor.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Controls\Content\UserStoryUI_View.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Controls\ViewModes\Background\EffortBars.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Controls\ViewModes\Background\EffortBar.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Controls\ViewModes\Background\EffortPointsBlendIn.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Controls\ViewModes\ViewPicker\CollapsedPicker.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Controls\ViewModes\ViewPicker\ExtendedPicker.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="Controls\ViewModes\ViewPicker\ViewElement.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="Utilities\Images.resx">
+      <Generator>PublicResXFileCodeGenerator</Generator>
+      <LastGenOutput>Images.Designer.cs</LastGenOutput>
+    </EmbeddedResource>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\floppy20.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\folder247.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\high23.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\settings51.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\volume52.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\connect.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\disconnect.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\delete96.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\bothbacklogs.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\productbacklog.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\sprintbacklog.png" />
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>

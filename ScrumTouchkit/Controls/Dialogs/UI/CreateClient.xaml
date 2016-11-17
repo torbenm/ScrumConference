@@ -1,0 +1,29 @@
+﻿<Dialogs:Dialog xmlns:Dialogs="clr-namespace:ScrumTouchkit.Controls.Dialogs" 
+             x:Class="ScrumTouchkit.Controls.Dialogs.UI.CreateClient"
+             xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+             xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+             mc:Ignorable="d" Height="210" Width="514" Background="#FFF3F3F3" BorderThickness="2" BorderBrush="Black" Padding="5">
+    <UserControl.Effect>
+        <DropShadowEffect BlurRadius="15" Direction="0" ShadowDepth="0"/>
+    </UserControl.Effect>
+    <Grid>
+        <StackPanel HorizontalAlignment="Stretch" VerticalAlignment="Stretch" Margin="0,0,-0.4,-0.4">
+            <Label Content="Create Client and Connect to Server" FontWeight="Bold" FontSize="20"/>
+            <Grid Height="46" Margin="0,0,-0.4,0">
+                <Label Content="IP-Address" HorizontalAlignment="Left" Margin="10,10,0,0" VerticalAlignment="Top"/>
+                <TextBox x:Name="_ipaddress" TextWrapping="Wrap" Text="127.0.0.1" Margin="113,10,9,12"/>
+            </Grid>
+            <Grid Height="46" Margin="0,0,-0.4,0">
+                <Label Content="TCP-Port" HorizontalAlignment="Left" Margin="10,10,0,0" VerticalAlignment="Top"/>
+                <TextBox x:Name="_port" TextWrapping="Wrap" Text="127.0.0.1" Margin="113,10,9,12"/>
+            </Grid>
+            <Grid Height="79" Margin="0,0,-0.4,0">
+                <Button x:Name="_cancel" Content="Cancel" HorizontalAlignment="Left" Margin="256,24,0,0" VerticalAlignment="Top" Width="108" Height="33"/>
+                <Button x:Name="_connect" Content="Connect" HorizontalAlignment="Left" Margin="381,24,0,0" VerticalAlignment="Top" Width="108" Height="33"/>
+            </Grid>
+        </StackPanel>
+
+    </Grid>
+</Dialogs:Dialog>
